@@ -7,7 +7,7 @@ FORKED_LOCAL_ENVIROMENTS =["mainnet-fork","mainnet-fork-dev-1"]
 
 def get_account():
     if network.show_active() in LOCAL_BLOCKCHAIN_ENVIROMENTS or \
-        network.show_active() in FORKED_LOCAL_ENVIROMENTS:
+          network.show_active() in FORKED_LOCAL_ENVIROMENTS:
         return accounts[0]
     else:
         return accounts.add(config['wallets']['from_key'])
